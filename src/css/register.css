@@ -19,13 +19,13 @@
     height: 100px;
     margin: 0 auto;
     position: relative; }
-    .imgHeader .imgHeaederCenter > .left {
+    .imgHeader .imgHeaederCenter .left {
       position: absolute;
       left: 0;
       top: 20px;
       width: 200px;
       height: 65px; }
-    .imgHeader .imgHeaederCenter > .right {
+    .imgHeader .imgHeaederCenter .right {
       position: absolute;
       right: 0px;
       height: 100px;

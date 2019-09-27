@@ -49,10 +49,23 @@ body {
   .topNav .topNavCenter {
     width: 1090px;
     margin: 0 auto;
+    position: relative;
     font-size: 12px;
     line-height: 30px; }
     .topNav .topNavCenter > .left {
-      float: left; }
+      float: left;
+      position: relative; }
+      .topNav .topNavCenter > .left .vip {
+        position: absolute;
+        left: 70px;
+        top: 0px;
+        background-color: #000;
+        overflow: hidden; }
+        .topNav .topNavCenter > .left .vip span {
+          color: red;
+          font-weight: 600px; }
+        .topNav .topNavCenter > .left .vip .logout {
+          cursor: pointer; }
       .topNav .topNavCenter > .left a {
         text-decoration: none;
         color: #999;
@@ -60,7 +73,8 @@ body {
         .topNav .topNavCenter > .left a:hover {
           color: #fff; }
       .topNav .topNavCenter > .left .chart {
-        position: relative; }
+        position: relative;
+        left: 40px; }
         .topNav .topNavCenter > .left .chart span {
           display: none;
           position: absolute;
@@ -126,12 +140,16 @@ body {
     height: 100px;
     margin: 0 auto;
     position: relative; }
-    .header .headerCen > img {
-      position: absolute;
+    .header .headerCen > .logo {
+      position: relative;
       left: 0;
-      top: 20px;
-      width: 200px;
-      height: 65px; }
+      top: 0; }
+      .header .headerCen > .logo > img {
+        position: absolute;
+        left: 0;
+        top: 20px;
+        width: 200px;
+        height: 65px; }
     .header .headerCen .headerSearch {
       position: absolute;
       left: 343px;
@@ -173,7 +191,7 @@ body {
           line-height: 44px; }
         .header .headerCen .headerSearch .button:hover {
           background-color: #e00; }
-    .header .headerCen > a {
+    .header .headerCen > .cart {
       height: 40px;
       width: 90px;
       display: block;
@@ -187,12 +205,12 @@ body {
       line-height: 40px;
       padding-left: 20px;
       font-size: 20px; }
-      .header .headerCen > a span {
+      .header .headerCen > .cart span {
         font-size: 20px;
         color: red;
         font-weight: 800; }
-      .header .headerCen > a:hover {
-        background-color: #ccc;
+      .header .headerCen > .cart:hover {
+        background-color: #fff;
         color: red; }
 
 /*头部nav*/

@@ -52,7 +52,17 @@ body {
     font-size: 12px;
     line-height: 30px; }
     .topNav .topNavCenter > .left {
-      float: left; }
+      float: left;
+      position: relative; }
+      .topNav .topNavCenter > .left .vip {
+        position: absolute;
+        left: 70px;
+        top: 0px;
+        background-color: #000;
+        overflow: hidden; }
+        .topNav .topNavCenter > .left .vip span {
+          color: red;
+          font-weight: 600; }
       .topNav .topNavCenter > .left a {
         text-decoration: none;
         color: #999;
@@ -126,12 +136,16 @@ body {
     height: 100px;
     margin: 0 auto;
     position: relative; }
-    .header .headerCen > img {
-      position: absolute;
+    .header .headerCen > .logo {
+      position: relative;
       left: 0;
-      top: 20px;
-      width: 200px;
-      height: 65px; }
+      top: 0; }
+      .header .headerCen > .logo > img {
+        position: absolute;
+        left: 0;
+        top: 20px;
+        width: 200px;
+        height: 65px; }
     .header .headerCen .headerSearch {
       position: absolute;
       left: 343px;
@@ -173,7 +187,7 @@ body {
           line-height: 44px; }
         .header .headerCen .headerSearch .button:hover {
           background-color: #e00; }
-    .header .headerCen > a {
+    .header .headerCen .cart {
       height: 40px;
       width: 90px;
       display: block;
@@ -187,11 +201,11 @@ body {
       line-height: 40px;
       padding-left: 20px;
       font-size: 20px; }
-      .header .headerCen > a span {
+      .header .headerCen .cart span {
         font-size: 20px;
         color: red;
         font-weight: 800; }
-      .header .headerCen > a:hover {
+      .header .headerCen .cart:hover {
         background-color: #ccc;
         color: red; }
 
@@ -201,6 +215,7 @@ body {
   background-color: #fff;
   border-bottom: 1px solid #ccc; }
   .headerNav .headerNavCen {
+    position: relative;
     width: 1090px;
     height: 40px;
     margin: 0 auto; }
@@ -241,6 +256,7 @@ body {
     .headerNav .headerNavCen > ul {
       padding-left: 200px;
       display: flex;
+      top: 10px;
       position: absolute; }
       .headerNav .headerNavCen > ul > li {
         padding: 0 20px;

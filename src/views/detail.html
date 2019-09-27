@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- <html lang="zh"> -->
 <head>
 <meta charset="UTF-8">
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Document</title>
 </head>
 <link rel="stylesheet" href="./../../dist/cssmin/head.min.css">
+<link rel="stylesheet" type="text/css" href="./../../dist/cssmin/normalize.css" />
+<!-- <link rel="stylesheet" href="./../../dist/cssmin/qdxw-demo.css"> -->
+<link rel="stylesheet" href="./../../dist/cssmin/jquery.exzoom.css">
 <link rel="stylesheet" href="./../../dist/cssmin/detail.min.css">
 <body>
         <div class="topNav">
@@ -20,6 +25,7 @@
                             <p>领1000元新人礼包</p>
                         </span>
                         </a>
+                        <div class="vip"><span></span><a class="logout">退出</a></div>
                     </div>
                     <div class="right">
                         <ul>
@@ -38,7 +44,7 @@
         <!-- 头部logo -->
         <div class="header">
            <div class="headerCen">
-                <img src="./../../static/images/logo.png" >
+                <a class="logo" href="./../index.html"><img src="./../../static/images/logo.png" ></a>
             <div class="headerSearch">
                     <div class="search">
                             <span class="iconfont">&#xe7a6;</span>
@@ -48,7 +54,7 @@
                             <span class="iconfont">&#xe7a6;</span>
                     </div>
             </div>
-            <a href="#">
+            <a class="cart" href="./cart.html">
                     <span class="iconfont">&#xe614;</span>购物车
             </a>
            </div>
@@ -61,21 +67,21 @@
                             <span class="iconfont">&#xe64d;</span>全部分类
                     </div>
                     <ul>
-                        <li><a href="./../views/list.html"><span class="iconfont">&#xe603;</span>美容彩妆<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe61a;</span>母婴儿童<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe61b;</span>营养保健<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe60d;</span>数码家电<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe638;</span>个人洗护<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe609;</span>服饰鞋靴<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe6ea;</span>运动户外<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe60a;</span>手表配饰<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe747;</span>极致轻奢<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe608;</span>家居生活<b>></b></a></li>
-                        <li><a href="#"><span class="iconfont">&#xe621;</span>环球美食<b>></b></a></li>
+                        <li><a href="./list.html"><span class="iconfont">&#xe603;</span>美容彩妆<b>></b></a></li>
+                        <li><a href="./list.html"> <span class="iconfont">&#xe61a;</span>母婴儿童<b>></b></a></li>
+                        <li><a href="./list.html"> <span class="iconfont">&#xe61b;</span>营养保健<b>></b></a></li>
+                        <li><a href="./list.html"> <span class="iconfont">&#xe60d;</span>数码家电<b>></b></a></li>
+                        <li><a href="./list.html"> <span class="iconfont">&#xe638;</span>个人洗护<b>></b></a></li>
+                        <li><a href="./list.html"> <span class="iconfont">&#xe609;</span>服饰鞋靴<b>></b></a></li>
+                        <li><a href="./list.html"> <span class="iconfont">&#xe6ea;</span>运动户外<b>></b></a></li>
+                        <li><a href="./list.html"> <span class="iconfont">&#xe60a;</span>手表配饰<b>></b></a></li>
+                        <li><a href="./list.html"> <span class="iconfont">&#xe747;</span>极致轻奢<b>></b></a></li>
+                        <li><a href="./list.html"> <span class="iconfont">&#xe608;</span>家居生活<b>></b></a></li>
+                        <li><a href="./list.html"><span class="iconfont">&#xe621;</span>环球美食<b>></b></a></li>
                     </ul>
                 </div>
                 <ul>
-                    <li><a href="">首页</a></li>
+                    <li><a href="./../index.html">首页</a></li>
                     <li><a href="">今日限时购</a></li>
                     <li><a href="">每日上新</a></li>
                     <li><a href="">国家馆</a></li>
@@ -88,24 +94,101 @@
             </div>
         </div>
 
-
+        <!-- 使用container -->
         <div class="container">
-            <div class="box">
-                <div class="middle">
-                    <img src="./../../static/images/middle1.jpg" alt="">
-                    <div class="shadow"></div>
-                </div>
-                <div class="small">
-                    <img class="current" src="./../../static/images/small1.jpg" alt="">
-                    <img src="./../../static/images/small2.jpg" alt="">
-                </div>
-                <div class="big"></div>
-            </div>
+                <!-- <div class="box"><div class="middle">
+                        <img src="./../../static/images/middle1.jpg" alt="">
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="big" ></div></div>
+                    <div class="buy">
+                                <h2>喷雾</h2>
+                                <span>美丽的化妆品</span>
+                                <p>价格：￥<b>68.5</b>元</p>
+                                <a class="cart" href="./cart.html">加入购物车</a>
+                                <a class="pay" href="">直接购买</a>
+                                <div class="evaluate">当前有10人评价</div>
+                        </div> -->
         </div>
-        
+        <!-- 插件 -->
+        <!-- <div class="exzoom" id="exzoom"> -->
+                <!--大图区域-->
+                <!-- <div class="exzoom_img_box"> -->
+                    <!-- <ul class='exzoom_img_ul'>
+                        <li><img src="./../../static/images/photos/img01.jpg" alt=""></li>
+                        <li><img src="./../../static/images/photos/img02.jpg" alt=""></li>
+                    </ul> -->
+                <!-- </div> -->
+                <!--缩略图导航-->
+                <!-- <div class="exzoom_nav"></div> -->
+                <!--控制按钮-->
+                <!-- <p class="exzoom_btn">
+                    <a href="javascript:void(0);" class="exzoom_prev_btn"> &lt; </a>
+                    <a href="javascript:void(0);" class="exzoom_next_btn"> &gt; </a>
+                </p>
+            </div> -->
+
+
+
+            <!-- 商品评价 -->
+            <div class="evaluation clearFix">
+                <div class="left">
+                    <h4>看了又看</h4>
+                    <ul>
+                        <li><a href="#"><img src="./../../static/images/detailEvaluation1.jpg" ></a>
+                        <p>【保湿紧致】SHISEIDO 资生堂 AQUALABEL水之印弹力保湿五效合一面霜 90克</p>
+                        <div><p>￥106</p><span>16147人已评价</span></div>
+                        </li>
+                        <li><a href="#">
+                            <img src="./../../static/images/detailEvaluation2.jpg" ></a>
+                            <p>Kao 花王 Curel 珂润润浸保湿面霜 40克</p>
+                            <div><p>￥188</p><span>5343人已评价</span></div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./../../static/images/detailEvaluation3.jpg" ></a>
+                            <p>Kiehl's 科颜氏 高保湿清爽面霜 125毫升</p>
+                            <div><p>￥106</p><span>24334人已评价</span></div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./../../static/images/detailEvaluation4.jpg" ></a>
+                            <p>【保湿紧致】SHISEIDO 资生堂 AQUALABEL水之印弹力保湿五效合一面霜 90克</p>
+                            <div><p>￥105</p><span>152人已评价</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="aside">
+                        <span class="details">商品详情</span>
+                        <span class="talk">用户评价</span>
+                        <a class="phone" href="">手机购买<img src="./../../static/images/chart.png" alt=""></a>
+                    </div>
+                    <div class="attribute">
+                        <img src="./../../static/images/Commodity details.jpg">
+                        <img src="./../../static/images/Commodity details1.jpg">
+                        <img src="./../../static/images/Commodity details2.jpg">
+                    </div>
+                </div>
+            </div>
 </body>
+<script src="./../js/cookie.js"></script>
 <script src="./../../node_modules/jquery/dist/jquery.js"></script>
 <script src="./../js/detail.js"></script>
-
-<script></script>
+<script >
+var u=getCookie('username');
+    if(u==undefined){
+        document.querySelector(".topNav .vip").innerHTML="";
+    }else{
+        document.querySelector(".topNav .vip span").innerText=u;
+        document.querySelector(".topNav .vip .logout").onclick=function(){
+        delCookie("username");
+        location.href='./login.html'
+    }
+    }</script>
+<!-- <script src="./../js/jquery-1.11.0.min.js"></script> -->
+<!-- <script src="./../js/jquery.exzoom.js"></script> -->
+<!-- <script type="text/javascript">
+    $("#exzoom").exzoom({
+        autoPlay: false,
+    });//方法调用，务必在加载完后执行
+</script> -->
 </html>

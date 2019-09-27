@@ -57,11 +57,28 @@ body{
         width:1090px;
         margin:0 auto;
         // overflow:hidden;
-    // position:absolute;
+        position:relative;
         font-size:12px;
         line-height:30px;
         >.left{
             float:left;
+            position:relative;
+            .vip{
+                // float:left;
+                position:absolute;
+                left:70px;
+                top:0px;
+                background-color: #000; 
+                overflow:hidden;
+                span{
+                    color:red;
+                    font-weight:600px;
+
+                }
+                .logout{
+                    cursor:pointer;
+                }
+            }
             a{
                 text-decoration:none;
                 color:#999;
@@ -72,6 +89,7 @@ body{
             }
             .chart{
                 position:relative;
+                left:40px;
                 span{
                     display:none;
                     position: absolute;
@@ -160,12 +178,17 @@ body{
         height:100px;
         margin:0 auto;
         position:relative;
-        >img{
-            position:absolute;
-            left: 0;
-            top: 20px;
-            width: 200px;
-            height: 65px;
+        >.logo{
+            position:relative;
+            left:0;
+            top:0;
+            >img{
+                position:absolute;
+                left: 0;
+                top: 20px;
+                width: 200px;
+                height: 65px;
+            }
         }
         .headerSearch{
             position: absolute;
@@ -219,7 +242,7 @@ body{
                 }
             }
         } 
-        >a{
+        >.cart{
             height:40px;
             width:90px;
             display:block;
@@ -239,7 +262,7 @@ body{
                 font-weight:800;
             }
             &:hover{
-                background-color:#ccc;
+                background-color:#fff;
                 color:red;
             }
         }

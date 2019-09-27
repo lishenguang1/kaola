@@ -1,3 +1,29 @@
+// console.log(document.querySelector(".topNav .vip"))
+// console.log(1)
+// var u=getCookie('username');
+//     if(u==undefined){
+//         document.querySelector(".topNav .vip").innerHTML="";
+//     }else{
+//         document.querySelector(".topNav .vip span").innerText=u;
+//         document.querySelector(".topNav .vip .logout").onclick=function(){
+//         delCookie("username");
+//         location.href='./views/login.html'
+//     }
+//     }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 var row= document.querySelector(".container .row")
 PAjax({
     method:"get",
@@ -30,3 +56,5 @@ PAjax({
     }
     row.innerHTML=str;
 })
+
+

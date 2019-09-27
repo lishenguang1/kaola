@@ -62,6 +62,19 @@ body{
         line-height:30px;
         >.left{
             float:left;
+            position:relative;
+            .vip{
+                // float:left;
+                position:absolute;
+                left:70px;
+                top:0px;
+                background-color: #000; 
+                overflow:hidden;
+                span{
+                    color:red;
+                    font-weight:600;
+                }
+            }
             a{
                 text-decoration:none;
                 color:#999;
@@ -160,12 +173,17 @@ body{
         height:100px;
         margin:0 auto;
         position:relative;
-        >img{
-            position:absolute;
-            left: 0;
-            top: 20px;
-            width: 200px;
-            height: 65px;
+        >.logo{
+            position:relative;
+            left:0;
+            top:0;
+            >img{
+                position:absolute;
+                left: 0;
+                top: 20px;
+                width: 200px;
+                height: 65px;
+            }
         }
         .headerSearch{
             position: absolute;
@@ -218,7 +236,7 @@ body{
                 }
             }
         } 
-        >a{
+        .cart{
             height:40px;
             width:90px;
             display:block;
@@ -250,6 +268,7 @@ body{
     background-color:#fff;
     border-bottom:1px solid #ccc;
     .headerNavCen{
+        position:relative;
         width:1090px;
         height:40px;
         margin:0 auto;
@@ -307,6 +326,7 @@ body{
             // float:left;
             padding-left:200px;
             display:flex;
+            top:10px;
             position:absolute;
             >li{
                 padding:0 20px;

@@ -52,7 +52,20 @@ body{
         font-size:12px;
         line-height:30px;
         >.left{
+            position:relative;
             float:left;
+            .vip{
+                // float:left;
+                position:absolute;
+                left:70px;
+                top:0px;
+                background-color: #000; 
+                overflow:hidden;
+                span{
+                    color:red;
+                    font-weight:600px;
+                }
+            }
             a{
                 text-decoration:none;
                 color:#999;
@@ -152,12 +165,17 @@ body{
         height:100px;
         margin:0 auto;
         position:relative;
-        >img{
-            position:absolute;
-            left: 0;
-            top: 20px;
-            width: 200px;
-            height: 65px;
+        >.logo{
+            position:relative;
+            left:0;
+            top:0;
+            >img{
+                position:absolute;
+                left: 0;
+                top: 20px;
+                width: 200px;
+                height: 65px;
+            }
         }
         .headerSearch{
             position: absolute;
@@ -211,9 +229,9 @@ body{
                 }
             }
         } 
-        >a{
-            height:40px;
-            width:90px;
+        >.cart{
+            height:46px;
+            width:116px;
             display:block;
             border:3px solid red;
             border-radius:40px;
@@ -231,7 +249,7 @@ body{
                 font-weight:800;
             }
             &:hover{
-                background-color:#ccc;
+                background-color:#fff;
                 color:red;
             }
         }
@@ -242,6 +260,7 @@ body{
     width:100%;
     background-color:#fff;
     .headerNavCen{
+        position:relative;
         width:1090px;
         height:40px;
         margin:0 auto;
@@ -302,7 +321,8 @@ body{
         >ul{
             // float:left;
             padding-left:200px;
-            display:flex;
+                top:10px;
+                display:flex;
             position:absolute;
             >li{
                 padding:0 20px;
@@ -344,17 +364,26 @@ body{
             text-align: center;
             font-size: 28px; 
             background-color:#f0f0f0;
-
+            
         }
         .container .row{
             background-color: #F6F6F6;
+            .panel .panel-heading{
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            }
             p{
             text-overflow: -o-ellipsis-lastline;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 1;
-            line-clamp: 1;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
             -webkit-box-orient: vertical;
                 &:hover{
                     white-space:wrap;

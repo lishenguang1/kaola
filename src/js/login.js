@@ -32,7 +32,7 @@ PAjax({
     res = JSON.parse(res);
     if(res.statas === 1){
         alert(res.msg);
-        setCookie("username",username,3600);
+        setCookie("username",username,7*3600);
         if(remember){
             setCookie("uname",username,7*60*60);
         }else{

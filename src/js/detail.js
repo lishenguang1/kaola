@@ -1,3 +1,5 @@
+// import { resolve } from "dns";
+var container=document.querySelector(".container");
 var parames = location.search;
 var reg = /id=([1-9]\d*)/;
 var res = parames.match(reg);
@@ -5,6 +7,24 @@ var res = parames.match(reg);
 var id=res[1];
 // console.log(res[1]); 提取到当前数据的id
 // console.log($);
+
+
+// $.ajax({
+//     url:"./../php/detail.php",
+//     type:"post",
+//     dataType:"json",
+//     data:{id:id},
+//     success:function(res){
+//         var str='';
+//         str += `<ul class='exzoom_img_ul'>
+//             <li><img src="${res.path}"/></li>
+//             <li><img src="${res.path}"/></li>
+//         </ul>`
+//         // console.log(str);
+//         exzoom.innerHTML=str;
+//     }
+// })
+
 var str="";
 $.ajax({
     url:"./../php/detail.php",
@@ -12,10 +32,60 @@ $.ajax({
     dataType:"json",
     data:{id:id},
     success:function(res){
-        console.log(res);
+        var str='';
+        str += `<div class="box">
+                    <div class="middle">
+                        <img src="${res.path}" alt="">
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="big" style="background-image:url(${res.path})"></div>
+                </div>
+                <div class="buy">
+                    <h2>${res.name}</h2>
+                    <span>${res.introduce}</span>
+                    <p>价格：￥<b>${res.price}</b>元</p>
+                    <a class="cart" href="javascript:;">加入购物车</a>
+                    <a class="pay" href="javascript:;">直接购买</a>
+                    <div class="evaluate">当前有10人评价</div>
+                </div>`
+        container.innerHTML=str;
+        var fang = new Fangdajing("box");
+        bindClick(res);
+
     }
 })
+function bindClick(data){
+    $(".container .buy .cart").click(function(){
+        var u=getCookie('username');
+        if(u==undefined){
+            location.href="./login.html";
+        }else{
+            // alert("已经登陆");
+            data.number=1;
+            // console.log(data);
+            var res = localStorage.getItem("data");
+            var arr = JSON.parse(res);
+            if(!arr){
+                arr=[];
+            }else{
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i].id===data.id){
+                        arr[i].number = arr[i].number-0+1;
+                        res=JSON.stringify(arr);
+                        localStorage.setItem("data",res);
+                        alert("收藏成功");
+                        return false;
+                    }
+                }
+            }
+            arr.push(data);
+            res=JSON.stringify(arr);
+            localStorage.setItem("data",res);
+        }
+        alert("收藏成功");
 
+    })
+}
 
 function Fangdajing(classname){ // Enlarge
     this.box = document.querySelector("."+classname);
@@ -27,13 +97,9 @@ function Fangdajing(classname){ // Enlarge
     this.that = this.smallImgs[0];
     var _this = this;
     for(var i=0;i<this.smallImgs.length;i++){
-        // this.smallImgs[i].addEventListener("click",()=>{
-        //     // this.Tab(); // 使用箭头函数不用换this
-        //     // console.log(this);
+        // this.smallImgs[i].addEventListener("click",function(){
+        //     _this.Tab(this);
         // });
-        this.smallImgs[i].addEventListener("click",function(){
-            _this.Tab(this);
-        });
     }
     this.middle.addEventListener("mouseover",function(){
         _this.over();
@@ -88,11 +154,11 @@ Fangdajing.prototype.move=function(e){
     
     
 }
-// 鼠标当道中盒子的事件：让遮罩和右边大盒子显示
+// 鼠标当中盒子的事件：让遮罩和右边大盒子显示
 Fangdajing.prototype.over=function(){
     this.shadow.style.display='block';
     this.big.style.display='block';
-    this.big.style.backgroundImage = `url(./../../static/images/big${this.middleImg.src.substr(this.middleImg.src.lastIndexOf(".")-1)})`;
+    // this.big.style.backgroundImage = `url(./../../static/images/big${this.middleImg.src.substr(this.middleImg.src.lastIndexOf(".")-1)})`;
 }
 // 鼠标离开中盒子的事件：让遮罩和右边大盒子隐藏
 Fangdajing.prototype.out=function(){
@@ -111,4 +177,4 @@ Fangdajing.prototype.Tab=function(img){
     var suffix = img.src.substr(dotIndex-1);
     this.middleImg.src = './../../static/images/middle'+suffix;
 }
-var fang = new Fangdajing("box");
+ 

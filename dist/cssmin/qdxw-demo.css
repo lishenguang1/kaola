@@ -1,0 +1,9 @@
+body,html{font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;padding: 0; margin: 0; font-size:100%;}
+.qdxw-container{margin: 0 auto;}
+/* Header */
+.qdxw-header{padding: 1em 190px 1em;letter-spacing: -1px;text-align: center;background: #65ae76;}
+.qdxw-header h1 {color: #fff;font-weight: 600;font-size: 2em;line-height: 1;margin-bottom: 0;}
+.qdxw-header h1 span {display: block;font-size: 60%;font-weight: 400;padding: 1em 0 1em 0;color:#EEEEEE;}
+.qdxw-foot{ text-align:center; margin-top:100px; letter-spacing:1px;}
+.qdxw-foot a{ color:#0033CC; text-decoration:none; font-size:18px;}
+ 
