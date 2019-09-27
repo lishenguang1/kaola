@@ -35,7 +35,7 @@ document.querySelector(".banner .button").onclick=function(){
         res = JSON.parse(res);
         if(res.status === 2){   
             alert(res.msg);
-            location.href = 'http://localhost/project/src/index.html';
+            location.href = 'http://localhost/project/src/views/login.html';
         }else if(res.status == 1){
             alert(res.msg);
             return false;

@@ -7,19 +7,8 @@
 <title>Document</title>
 </head>
 <link rel="stylesheet" href="./../../dist/cssmin/head.min.css">
+<link rel="stylesheet" href="./../../dist/cssmin/cart.min.css">
 <style>
-
-ul,li{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.info,.number,.xiaoji,.remove{
-    display: inline-block;
-}
-.number .num{
-    width: 50px;
-}
 </style>
 <body>
         <div class="topNav">
@@ -53,62 +42,28 @@ ul,li{
         <div class="header">
            <div class="headerCen">
                 <a class="logo" href="./../index.html"><img src="./../../static/images/logo.png" ></a>
-            <div class="headerSearch">
-                    <div class="search">
-                            <span class="iconfont">&#xe7a6;</span>
-                            <input type="text">
-                    </div>
-                    <div class="button">
-                            <span class="iconfont">&#xe7a6;</span>
-                    </div>
-            </div>
-            <a class="cart" href="./cart.html">
-                    <span class="iconfont">&#xe614;</span>购物车
-            </a>
+
            </div>
         </div>
-        <!-- 头部nav -->
-        <div class="headerNav">
-            <div class="headerNavCen">
-                <div class="classfy">
-                    <div class="all">
-                            <span class="iconfont">&#xe64d;</span>全部分类
-                    </div>
-                    <ul>
-                        <li><a href="./../views/list.html"><span class="iconfont">&#xe603;</span>美容彩妆<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe61a;</span>母婴儿童<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe61b;</span>营养保健<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe60d;</span>数码家电<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe638;</span>个人洗护<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe609;</span>服饰鞋靴<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe6ea;</span>运动户外<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe60a;</span>手表配饰<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe747;</span>极致轻奢<b>></b></a></li>
-                        <li><a href="#"> <span class="iconfont">&#xe608;</span>家居生活<b>></b></a></li>
-                        <li><a href="#"><span class="iconfont">&#xe621;</span>环球美食<b>></b></a></li>
-                    </ul>
-                </div>
-                <ul>
-                    <li><a href="">首页</a></li>
-                    <li><a href="">今日限时购</a></li>
-                    <li><a href="">每日上新</a></li>
-                    <li><a href="">国家馆</a></li>
-                    <li><a href="">海外旗舰店</a></li>
-                    <li><a href="">工厂店</a></li>
-                    <li><a href="">品质奶粉</a></li>
-                    <li><a href="">人气面膜</a></li>
-                    <li><a href="">充值</a></li>
-                </ul>
-            </div>
-        </div>
 
 
 
-
-
+    <div class="cartBox">
         <div class="container">
-                <li><input type="checkbox" class="checkAll">全选</li>
-                        <ul>
+            <h3><span class="mycart">我的购物车</span>
+            <span class="ziying">考拉自营商品已免运费&nbsp;&nbsp;<a href="./../index.html">再逛逛></a></span>
+            </h3>
+                <li class="headLi">
+                    <div class="col1 col">
+                    <input type="checkbox" class="checkAll">全选
+                    </div>
+                    <div class="col2 col">商品信息</div>
+                    <div class="col3 col">单价（元）</div>
+                    <div class="col4 col">数量</div>
+                    <div class="col5 col">金额（元）</div>
+                    <div class="col6 col">操作</div>
+                </li>
+                        <ul class="goods">
                             <!-- <li>
                                 <input type="checkbox" class="cheackOne">
                             <img src="./../../static/images/detailEvaluation4.jpg" width="100" height="100">
@@ -117,10 +72,55 @@ ul,li{
                             </li> -->
                             
                         </ul>
-                <li><input type="checkbox" class="checkAll">全选</li>
-                <p>总共：共<span class="numberCount">0</span>件商品，共计：￥<span class="priceCount">0.00</span>元</p>
-                <button>结算</button>
-     </div>
+                              
+                <li class="lastLi"><input type="checkbox" class="checkAll"><span>全选</span><div class="cartinfo">总共优惠￥：0.00元</div>  </li>
+                <p class="ttbar">已选商品<span class="numberCount">0</span>件&nbsp;&nbsp;&nbsp;&nbsp;共计：￥<span class="priceCount">0.00</span>元</p>
+                <button class="gobuy">结算</button>
+        </div>
+    </div>
+
+
+
+
+    <div class="footerWrap">
+            <div class="footerCen">
+                <div class="footerList">
+                    <ul class="clearFix">
+                        <li><div class="fontIcon">正</div><b>正品承诺</b><span>正品保障 假一赔十</span></li>
+                        <li><div class="fontIcon">低</div><b>低价保障</b><span>缩减中间环节 确保低价</span></li>
+                        <li><div class="fontIcon">退</div><b>30天无忧退货</b><span>国内退货 售后无忧</span></li>
+                        <li><div class="fontIcon">邮</div><b>满88包邮</b><span>部分特殊商品除外</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="footerLogo">
+            <div class="footerLogoCen">
+                <img src="./../../static/images/footerImg.jpg" alt="">
+            </div>
+        </div>
+        <!-- 3 -->
+    <div class="footer">
+            <h4><a href="#">隐私政策</a>-<a href="#">考拉海购</a></h4>
+            <p>
+                <span>增值电信业务经营许可证：浙B2-20160288</span>
+                <a href="#">自营经营者信息</a> 
+                <span>（浙）网械平台备字[2018]第00007号</span>
+            </p>
+            <div class="copy">
+                <img src="./../../static/images/police.png">
+                <a href="#">浙公网安备 33010802002216号 </a>
+                <span>阿里巴巴版权所有©2003-2019</span>
+                <a href="#">互联网药品信息服务资格证书编号（浙）-2017-0027 </a>
+                <span>浙ICP备16011229号-6</span>
+            </div>
+            <div class="icon">
+                <img src="./../../static/images/icon1.png" >
+                <img src="./../../static/images/icon2.png" alt="">
+                <img src="./../../static/images/icon3.gif" alt="">
+            </div>
+        </div>
 </body>
 <script src="./../js/cookie.js"></script>
 <script src="./../../node_modules/jquery/dist/jquery.js"></script>
@@ -141,7 +141,6 @@ var u=getCookie('username');
 
 function loadPage(){
 var str = localStorage.getItem("data");
-// console.log(str)
 if(str==null){
     return false;
 }
@@ -150,25 +149,30 @@ var html="";
 for(var i=0;i<arr.length;i++){
     html+=`
     <li>
-            <input type="checkbox" class="checkOne">
-        <img src="${arr[i].path}" width="100" height="100">
-        <div class="info">
-            <span>${arr[i].name}</span><b>价格：￥<strong>${arr[i].price}</strong></b>
+            <input type="checkbox" class="checkOne col0">
+        <img src="${arr[i].path}" width="100" height="100" class="col1">
+        <div class="info col2">
+            <span>${arr[i].name}<br>
+                <a href="javascript:;">30天无忧退款</a></span><b>￥<strong>${arr[i].price}</strong></b>
         </div>
-        <div class="number">
-            <button class="cut">-</button>
-            <input type="number" class="num" value="${arr[i].number}">
-            <input type="hidden" name="stock" value="${arr[i].stock}">
-            <button class="add">+</button>
+        <div class="number col3">
+            <button class="cut">-</button><input type="number" class="num" value="${arr[i].number}"><input type="hidden" name="stock" value="${arr[i].stock}"><button class="add">+</button>
         </div>
         <div class="xiaoji">小计￥<span class="xiaojiNum">${(arr[i].number*arr[i].price).toFixed(2)}</span></div>
         <button class="remove" data-id="${arr[i].id}">删除</button>
         </li>
+        
     `
-}
-$(".container ul").html(html);
-curadd();
-checkOneClick();
+    }
+    if(!html){
+        $(".container ul").html("<a href='./login.html'><img src='./../../static/images/empty.jpg'></a>");
+    }else{
+        $(".container ul").html(html);
+
+    }
+    
+    curadd();
+    checkOneClick();
 }
 loadPage();
 
@@ -178,7 +182,6 @@ function checkOneClick(){
     $(".container .checkOne").click(function(){
     var arr = Array.prototype.slice.call($(".checkOne"));
     var res=arr.every(function(v){
-        // console.log($(v).prop("checked"))
         if($(v).prop("checked")){
             return true;
         }
@@ -190,8 +193,6 @@ function checkOneClick(){
     }
     count();
     })
-    count();
-    
 }
 
 
@@ -201,7 +202,7 @@ function store(){
     var str = localStorage.getItem("data");
     var arr = JSON.parse(str);
     for(var i=0;i<arr.length;i++){
-        $(".container .remove").attr("data-id").each(function(i,v){
+        $(".container .remove").each(function(i,v){
             if(arr[i].id == $(v).attr("data-id")){
                 arr[i].number = $(v).siblings(".number").children(".num").val()-0;
             }
@@ -241,6 +242,7 @@ function count(){
         numberCount +=$(v).siblings(".number").children(".num").val()-0;
         xiaojiNum +=$(v).siblings(".xiaoji").children(".xiaojiNum").text()-0;
     });
+    console.log(numberCount)
     $(".container .numberCount").text(numberCount);
     $(".container .priceCount").text(xiaojiNum.toFixed(2));
 }
@@ -268,7 +270,7 @@ function curadd(){
     }
     addup();
 
-    stroe();
+    store();
 
     count();
 })
@@ -293,5 +295,11 @@ $(".container .remove").each(function(){
     })
 })
 
+
+//进入付款页
+
+$(".gobuy").click(function(){
+    location.href="./confirm.html";
+})
 </script>
 </html>

@@ -30,6 +30,6 @@ gulp.task("server",function(){
         root:"./",
         port:2019,
         livereload:true
-    });
+    });  
 gulp.watch("./src/sass/*.scss",["default"])  
 });

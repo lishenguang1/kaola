@@ -71,6 +71,7 @@ body {
       background-color: #f00;
       text-align: center;
       line-height: 50px;
+      border: 3px solid #f00;
       font-size: 25px; }
     .container .buy .pay {
       display: inline-block;
@@ -205,3 +206,71 @@ body {
       width: 100%;
       height: 500px;
       display: block; }
+
+.footerWrap {
+  background: #fff;
+  border-top: 1px solid #eaeaea; }
+  .footerWrap .footerCen {
+    width: 1100px;
+    margin: 0 auto;
+    background-color: transparent;
+    text-align: left;
+    font-size: inherit;
+    color: inherit;
+    cursor: default;
+    display: block; }
+    .footerWrap .footerCen .footerList {
+      padding: 49px 0;
+      border-bottom: 1px solid #eaeaea;
+      zoom: 1; }
+      .footerWrap .footerCen .footerList ul li {
+        float: left;
+        width: 233px;
+        margin-left: 42px; }
+        .footerWrap .footerCen .footerList ul li .fontIcon {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          border: 2px solid #d6d6d6;
+          text-align: center;
+          line-height: 44px;
+          font-size: 20px;
+          font-weight: 700;
+          margin-right: 12px;
+          float: left; }
+        .footerWrap .footerCen .footerList ul li > b {
+          font-size: 18px;
+          font-weight: 700; }
+        .footerWrap .footerCen .footerList ul li > span {
+          display: block;
+          line-height: 22px; }
+
+.footerLogo {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #000; }
+  .footerLogo .footerLogoCen {
+    width: 1100px;
+    margin: 0 auto; }
+    .footerLogo .footerLogoCen > img {
+      width: 1100px; }
+
+.footer {
+  padding: 20px 0;
+  line-height: 26px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #333;
+  color: #fff; }
+  .footer a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 200;
+    color: #fff; }
+  .footer > p > a {
+    padding: 0 15px; }
+  .footer .icon {
+    height: 30px; }
+    .footer .icon > img {
+      height: 30px;
+      margin: 5px 15px 0 0; }

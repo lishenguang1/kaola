@@ -92,7 +92,8 @@
           background: red;
           color: white;
           font-size: 18px;
-          text-align: center; }
+          text-align: center;
+          cursor: pointer; }
       .banner .bannerCenter .Register .quick {
         height: 35px;
         background: #f8f8f8;
